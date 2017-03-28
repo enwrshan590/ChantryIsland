@@ -128,9 +128,9 @@
           <form action="contact.php" method="post">
             <input type="text" name="fname" placeholder="First Name" required>
             <input type="text" name="lname" placeholder="Last Name" required><br>
-            <input type="tel" name="phone" placeholder="Phone Number" required><br>
-            <input type="email" name="email" placeholder="Email" required><br>
-            <input type="text" name="subject" placeholder="Subject" required><br>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
             <textarea placeholder="Message" name="message" required></textarea>
             <input type="submit" name="submit" value="Submit" style="font-size: large;">
           </form>

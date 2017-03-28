@@ -25,7 +25,7 @@
           <div class="tabs-content" data-tabs-content="collapsing-tabs">
             <div class="tabs-panel is-active row" id="panel1">
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/george_plant/peerless_3.jpg" alt="Tour Boat">
+                <img src="images/george_plant/peerless_3.jpg" alt="Tour Boat" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: George Plant">
               </div>
               <div class="small-12 medium-6 large-6 columns">
                 <h4>Chantry Island</h4>
@@ -36,7 +36,7 @@
                 The island varies in size depending on the level of Lake Huron. Today, with a low lake level Chantry Island is about 68 acres. In 1986 when the water level was at the highest of the century, the island was only about 10 acres, causing trees on the west, north and south sides to drown.</p>
               </div>
               <div class="small-12 medium-6 large-6 columns" id="boatTourImg">
-                <img src="images/wayne_macdonald/tour_boat.jpg" alt="Tour Boat">
+                <img src="images/wayne_macdonald/tour_boat.jpg" alt="Tour Boat" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Wayne MacDonald">
               </div>
             </div>
 
@@ -47,7 +47,7 @@
                 The lighthouse stands 86 ft. above water level and is 80 ft. high from its base to the light’s center. The lantern room of the lighthouse was fitted with a Fresnel lens built and transported from Paris, France. The first fuel used was sperm whale oil and the first light was a fixed light, not the familiar flashing one. Other fuels used have been colza oil, coal oil, kerosene, acetylene and electricity. Its present-day flashing light is solar powered.</p>
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/vicki_tomori/island_1.jpg" alt="Lighthouse">
+                <img src="images/vicki_tomori/island_1.jpg" alt="Lighthouse" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Vicki Tomori">
               </div>
             </div>
 
@@ -58,19 +58,19 @@
                 Because the island is a migratory bird sanctuary, the number of people on the island on any given day is strictly limited and tours must be booked through the Chantry Island Tour Base.</p>
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/carol_walberg/birds_1.jpg" alt="Birds">
+                <img src="images/carol_walberg/birds_1.jpg" alt="Birds" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Carol Walberg">
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/nancy_calder/birds_3.jpg" alt="Birds">
+                <img src="images/nancy_calder/birds_3.jpg" alt="Birds" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Nancy Calder">
               </div>
             </div>
 
             <div class="tabs-panel row" id="panel4">
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/terry_thomas/sunset_3.jpg" alt="Sunset">
+                <img src="images/terry_thomas/sunset_3.jpg" alt="Sunset" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Terry Thomas">
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/terry_thomas/sunset_4.bmp" alt="Sunset">
+                <img src="images/terry_thomas/sunset_4.bmp" alt="Sunset" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Terry Thomas">
               </div>
             </div>
           </div>

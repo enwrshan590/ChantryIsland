@@ -1627,7 +1627,7 @@ td.tg-s6z2.row1, td.tg-s6z2.row3, td.tg-s6z2.row5, td.tg-s6z2.row7 {
 	text-align: center;
 }
 
-input[type="text"], input[type="email"], textarea[name="message"] {
+input[type="text"], input[type="email"], input[type="tel"], textarea[name="message"] {
 	border: none;
 	box-shadow: none;
 	background-color: #f0f0f0;
@@ -1752,7 +1752,7 @@ input[type="submit"]:hover {
 		padding: 0 150px 0 150px;
 	}
 
-	input[type="text"], input[type="email"], textarea[name="message"] {
+	input[type="text"], input[type="email"], input[type="tel"], textarea[name="message"] {
 		width: 99.3%;
 	}
 

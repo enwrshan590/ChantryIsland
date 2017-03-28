@@ -22,16 +22,16 @@
       <div class="row" id="gallerySec">
         <div class="small-12 medium-12 large-12 columns">
           <div class="small-6 medium-3 large-3 columns">
-            <a href="gallery.php"><img src="images/boat.jpg" alt="Boat"></a>
+            <a href="gallery.php"><img src="images/boat.jpg" alt="Boat" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: George Plant"></a>
           </div>
           <div class="small-6 medium-3 large-3 columns">
-            <a href="gallery.php"><img src="images/flower.jpg" alt="Flower"></a>
+            <a href="gallery.php"><img src="images/flower.jpg" alt="Flower" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Vicki Tomori"></a>
           </div>
           <div class="small-6 medium-3 large-3 columns">
-            <a href="gallery.php"><img src="images/office.jpg" alt="Office"></a>
+            <a href="gallery.php"><img src="images/office.jpg" alt="Office" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Vicki Tomori"></a>
           </div>
           <div class="small-6 medium-3 large-3 columns">
-            <a href="gallery.php"><img src="images/boat-tours.jpg" alt="Office Sign"></a>
+            <a href="gallery.php"><img src="images/boat-tours.jpg" alt="Office Sign" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Misc."></a>
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@
             Chantry Island and/or New Tour Boat</p>
           </div>
           <div class="small-12 medium-7 large-7 columns" id="sunsetPic">
-            <img src="images/terry_thomas/sunset_1.jpg" alt="Sunset Picture">
+            <img src="images/terry_thomas/sunset_1.jpg" alt="Sunset Picture" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Vicki Tomori">
           </div>
         </div>
       </div>
