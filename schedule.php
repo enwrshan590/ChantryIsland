@@ -27,7 +27,7 @@
 
       <div class="row" id="schedSec">
         <div class="small-12 medium-12 large-12 columns">
-          <h3>Schedule</h3>
+          <h3>Chantry Island Tour Base & Gift Shop </h3>
           <table class="tg">
             <tr>
               <th class="tg-s6z2" id="dateTitle">DATE</th>
@@ -35,34 +35,18 @@
             </tr>
             <tr>
               <td class="tg-s6z2 borderClass row1">May 27, 28</td>
-              <td class="tg-s6z2 borderClass row1">1:00 PM</td>
-              <td class="tg-s6z2 row1">3:00 PM</td>
+              <td class="tg-s6z2 borderClass row1">12:00 PM</td>
+              <td class="tg-s6z2 row1">5:30 PM</td>
             </tr>
             <tr>
               <td class="tg-s6z2 borderClass row2">June 3, 4, 10, 11, 17, 18, 24, 25</td>
-              <td class="tg-s6z2 borderClass row2">1:00 PM</td>
-              <td class="tg-s6z2 row2">3:00 PM</td>
+              <td class="tg-s6z2 borderClass row2">12:00 PM</td>
+              <td class="tg-s6z2 row2">5:30 PM</td>
             </tr>
             <tr>
               <td class="tg-s6z2 borderClass row3">July 1 - Sept 4<br>(7 days a week)</td>
-              <td class="tg-s6z2 borderClass row3">1:00 PM</td>
-              <td class="tg-s6z2 row3">3:00 PM</td>
-            </tr>
-            <tr>
-              <td class="tg-s6z2 borderClass row4">July weekends<br>Saturday and Sunday<br>(Additional morning tour)</td>
-              <td class="tg-s6z2 row4" colspan="2">9:30 AM</td>
-            </tr>
-            <tr>
-              <td class="tg-s6z2 borderClass row5">Aug 1 - Aug 31<br>(Additional morning tour)</td>
-              <td class="tg-s6z2 row5" colspan="2">9:30 AM</td>
-            </tr>
-            <tr>
-              <td class="tg-s6z2 borderClass row6">Tour base open May/June weekends</td>
-              <td class="tg-s6z2 row6" colspan="2">12:00 PM - 5:30 PM</td>
-            </tr>
-            <tr>
-              <td class="tg-s6z2 borderClass row7">Tour base open July 1 - Sept 4 every day</td>
-              <td class="tg-s6z2 row7" colspan="2">9:00 AM - 5:30 PM</td>
+              <td class="tg-s6z2 borderClass row3">9:00 PM</td>
+              <td class="tg-s6z2 row3">5:30 PM</td>
             </tr>
           </table>
         </div>
@@ -72,7 +56,7 @@
           Special group rates available.<br>
           MasterCard, Visa, Debit accepted.</p>
         </div>
-      </div>     
+      </div>
 
 <?php
   require_once("includes/footer.html");
