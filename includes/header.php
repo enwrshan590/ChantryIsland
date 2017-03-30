@@ -15,7 +15,6 @@
           <li><a href="https://www.facebook.com/MarineHeritageSociety" target="_blank"><img src="images/facebook_color.svg" alt="Facebook"></a></li>
           <li><a href="https://twitter.com/Chantry_Island?lang=en" target="_blank"><img src="images/twitter_color.svg" alt="Twitter"></a></li>
           <li><a href="https://www.youtube.com/channel/UC5BwiLq9hSIl9BZRq7Q4UNA?feature=watch" target="_blank"><img src="images/youtube_color.svg" alt="YouTube"></a></li>
-          <li><a href="https://www.instagram.com/" target="_blank"><img src="images/instagram_color.svg" alt="Instragram"></a></li>
         </ul>
       </div>
 

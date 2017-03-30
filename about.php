@@ -1,5 +1,13 @@
 <?php
-  require_once("includes/header.html");
+  require_once("admin/phpscripts/init.php");
+
+  ini_set('display_errors',1);
+  error_reporting(E_ALL);
+
+  $id="about_id"; 
+  $popForm = getAbout($id);
+
+  require_once("includes/header.php");
 ?>
 
       <!-- Header section -->
@@ -25,10 +33,10 @@
           <div class="tabs-content" data-tabs-content="collapsing-tabs">
             <div class="tabs-panel is-active row" id="panel1">
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/george_plant/peerless_3.jpg" alt="Tour Boat" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: George Plant">
+                <img src="images/george_plant/peerless_3.jpg" alt="Tour Boat">
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <h4>Chantry Island</h4>
+                <h4><?php echo $popForm['about_title'] ?></h4>
                 <p>Chantry Island is located on Lake Huron, just over a mile southwest of the Saugeen River mouth in Southampton, Ontario. On the island is a majestic Imperial Lighthouse built in the mid 1800’s, as well as the Keeper’s quarters and a boat house. In 1822, during a hydrographic survey, Captain Henry Bayfield of the Royal Navy christened the island and named it after his friend and British sculptor Sir Francis Chantry.</p>
               </div>
               <div class="small-12 medium-6 large-6 columns" id="glacialBlurb">
@@ -36,7 +44,7 @@
                 The island varies in size depending on the level of Lake Huron. Today, with a low lake level Chantry Island is about 68 acres. In 1986 when the water level was at the highest of the century, the island was only about 10 acres, causing trees on the west, north and south sides to drown.</p>
               </div>
               <div class="small-12 medium-6 large-6 columns" id="boatTourImg">
-                <img src="images/wayne_macdonald/tour_boat.jpg" alt="Tour Boat" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Wayne MacDonald">
+                <img src="images/wayne_macdonald/tour_boat.jpg" alt="Tour Boat">
               </div>
             </div>
 
@@ -47,7 +55,7 @@
                 The lighthouse stands 86 ft. above water level and is 80 ft. high from its base to the light’s center. The lantern room of the lighthouse was fitted with a Fresnel lens built and transported from Paris, France. The first fuel used was sperm whale oil and the first light was a fixed light, not the familiar flashing one. Other fuels used have been colza oil, coal oil, kerosene, acetylene and electricity. Its present-day flashing light is solar powered.</p>
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/vicki_tomori/island_1.jpg" alt="Lighthouse" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Vicki Tomori">
+                <img src="images/vicki_tomori/island_1.jpg" alt="Lighthouse">
               </div>
             </div>
 
@@ -58,19 +66,19 @@
                 Because the island is a migratory bird sanctuary, the number of people on the island on any given day is strictly limited and tours must be booked through the Chantry Island Tour Base.</p>
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/carol_walberg/birds_1.jpg" alt="Birds" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Carol Walberg">
+                <img src="images/carol_walberg/birds_1.jpg" alt="Birds">
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/nancy_calder/birds_3.jpg" alt="Birds" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Nancy Calder">
+                <img src="images/nancy_calder/birds_3.jpg" alt="Birds">
               </div>
             </div>
 
             <div class="tabs-panel row" id="panel4">
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/terry_thomas/sunset_3.jpg" alt="Sunset" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Terry Thomas">
+                <img src="images/terry_thomas/sunset_3.jpg" alt="Sunset">
               </div>
               <div class="small-12 medium-6 large-6 columns">
-                <img src="images/terry_thomas/sunset_4.bmp" alt="Sunset" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Image by: Terry Thomas">
+                <img src="images/terry_thomas/sunset_4.bmp" alt="Sunset">
               </div>
             </div>
           </div>
@@ -96,5 +104,5 @@
       </div>
 
 <?php
-  require_once("includes/footer.html");
+  require_once("includes/footer.php");
 ?>

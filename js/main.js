@@ -1,5 +1,7 @@
 (function(){
 
+  // gallery
+
   var thumbnails = document.querySelectorAll('#thumbnails img'),
       mainImage = document.querySelector('.gallery-large'),
       imageDesc = document.querySelector('.desc-text'),
@@ -42,5 +44,16 @@ function showResults(){
  function changeOpacity() {
       TweenMax.to(mainImage, 1, {opacity:1});
   }
+
+
+
+
+
+
+
+
+
+
+
 
 })();

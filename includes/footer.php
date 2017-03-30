@@ -1,3 +1,13 @@
+<?php
+  require_once("admin/phpscripts/init.php");
+
+  ini_set('display_errors',1);
+  error_reporting(E_ALL);
+
+  $popContact = getContact();
+
+?>
+
      <!-- Footer -->
       <footer class="row" id="footerSec">
         <div class="small-12 medium-12 medium-centered large-9 columns" id="footerPad">
@@ -35,9 +45,9 @@
           </div>
           <div class="small-12 medium-3 large-4 columns end" id="address">
             <h4>Contact Us</h4>
-            <p><b>ADDRESS:</b> 86 Saugeen St.<br>Southampton, Ontario<br>
-            <b>CALL:</b> <a href="tel:519-797-5862">519-797-5862</a><br>
-            <b>TOLL FREE:</b> <a href="tel:1-866-797-5862">1-866-797-5862</a></p>
+            <p><b>ADDRESS:</b> <?php echo $popContact['contact_address'] ?><br>
+            <b>CALL:</b> <a href="tel:<?php echo $popContact['contact_phone'] ?>"><?php echo $popContact['contact_phone'] ?></a><br>
+            <b>TOLL FREE:</b> <a href="tel:<?php echo $popContact['contact_tollphone'] ?>"><?php echo $popContact['contact_tollphone'] ?></a></p>
           </div>
           <div class="small-12 medium-4 large-3 columns end" id="conForm">
             <h5>Fill in this form to contact us via email.</h5>
@@ -61,6 +71,7 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
+    <script src="js/map_api.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
