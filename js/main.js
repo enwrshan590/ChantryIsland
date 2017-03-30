@@ -30,7 +30,7 @@ function showResults(){
         item.classList.remove('hidden');
       });
 
-      mainImage.src = "images/gallery/" + imageData.gallery_image + '.jpg';
+      mainImage.src = "images/gallery/" + imageData.gallery_image;
       imageDesc.innerHTML = imageData.gallery_desc;
 
       TweenMax.to(mainImage, 0, {alpha:0, onComplete:changeOpacity});

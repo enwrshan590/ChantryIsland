@@ -454,3 +454,50 @@ input[type="submit"]:hover {
 .tabs {
 	border: none;
 }
+
+.adminGalImg {
+	height: 350px;
+}
+
+.adminNews {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.adminNews p {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.adminGalImg img {
+	height: 200px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.adminGalImg h4, .adminNews h4 {
+	font-size: 0.9em;
+	text-align: center;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+.adminGalImg h5, .adminNews h5 {
+	font-family: 'MyriadPro-Semibold', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 0.8em;
+	margin: 0;
+	padding: 0;
+}
+
+.deleteConBut {
+	text-align: center;
+}
+
+.deleteNewsBut a {
+	margin-bottom: 30px;
+}
+

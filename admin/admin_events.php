@@ -11,7 +11,7 @@
 		$newsImg = $_FILES['news_image']['name'];
 		$title = $_POST['news_title'];
 		$content = $_POST['news_content'];
-		$type = 1;
+		$type = 2;
 		
 		$result = addNews($type, $newsImg, $title, $content);
 		
@@ -20,7 +20,7 @@
 
 $tbl = "tbl_news";
   $col = "news_type";
-  $id = 1;
+  $id = 2;
   $deleteImg = dynamicNews($tbl, $col, $id);
 
   require_once("../includes/admin_header.php");
@@ -28,15 +28,15 @@ $tbl = "tbl_news";
 
 			<div class="holder">
 	      	<div class="small-12 medium-12 large-12 columns homeBox">
-	      		<h4>News Page</h4>
+	      		<h4>Events Page</h4>
 	      		<p><b>Add and delete stories on the news page.</b><br>
 	      		<i>If you want to make a line break in your paragraph, add in "< br >" without the quotations marks and spaces.</i></p>
 
 					<div class="row" id="tabsSec">
 			        <div class="small-12 medium-12 large-12 columns">
 			          <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
-			            <li class="tabs-title is-active"><a href="#panel1">ADD NEWS STORY</a></li>
-			            <li class="tabs-title"><a href="#panel2">DELETE NEWS STORY</a></li>
+			            <li class="tabs-title is-active"><a href="#panel1">ADD EVENT</a></li>
+			            <li class="tabs-title"><a href="#panel2">DELETE EVENT</a></li>
 			          </ul>
 
 			          <div class="tabs-content" data-tabs-content="collapsing-tabs">

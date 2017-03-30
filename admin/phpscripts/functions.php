@@ -53,38 +53,53 @@
 			mysql_close($link);
 	}
 
-		function addNews($type, $newsTitle, $newsImg, $newsContent) {
-			include('connect.php');
-			$newsImg = mysqli_real_escape_string($link,$newsImg); //cleans file name - should be done anytime something is inserted to the DB
+	function addNews($type, $newsImg, $title, $content) {
+		include('connect.php');
+		$newsImg = mysqli_real_escape_string($link, $newsImg);
 
-			
-			$date = date('o-m-d');
+		$date = date('o-m-d');
 
-
-				$updatenews = "INSERT INTO tbl_news VALUES(NULL, '{$type}', '{$newsTitle}', '{$date}', 'default.jpg', '{$newsContent}')";
-				$updateFinal = mysqli_query($link, $updatenews);
-
-				$message = "<i>Your news story has successfully been added.</i>";
-					return $message;
-
+		$qstring = "INSERT INTO tbl_news VALUES(NULL, '{$type}', '{$title}', '{$date}', 'default.jpg', '{$content}')";
+		$result = mysqli_query($link,$qstring);
 		
-			if($_FILES['news_image']['type'] == "image/jpg" || $_FILES['news_image']['type'] == "image/jpeg") {
-				
-				$targetpath = "../images/news/{$newsImg}";
 
-				if(move_uploaded_file($_FILES['news_image']['tmp_name'],$targetpath)) {
+		if($_FILES['news_image']['type'] == "image/jpg" || $_FILES['news_image']['type'] == "image/jpeg") {
 				
-					$orig = "../images/news/".$newsImg;
-					
-					$updatenews = "INSERT INTO tbl_news VALUES(NULL, '{$type}', '{$newsTitle}', '{$date}', '{$newsImg}', '{$newsContent}')";
-					$updateFinal = mysqli_query($link, $updatenews);
-
-					$message = "<i>Your news story has successfully been added.</i>";
-					return $message;
-				}
+			$targetpath = "../images/news/{$newsImg}";
+			
+			if(move_uploaded_file($_FILES['news_image']['tmp_name'],$targetpath)) {
+				
+				$orig = "../images/news/".$newsImg;
+				
+				$qstring = "INSERT INTO tbl_news VALUES(NULL, '{$type}', '{$title}', '{$date}', '{$newsImg}', '{$content}')";
+				//echo $qstring;
+				$result = mysqli_query($link,$qstring);
+				
+				$message = "<i>Your news story has successfully been added.</i>";
+				return $message;
 			}
-			mysqli_close($link);
 		}
+		
+		mysqli_close($link);
+	}
+
+
+	function deleteNews($id) {
+		include('connect.php');
+
+		$delstring = "DELETE FROM tbl_news WHERE news_id={$id}";
+		$delquery = mysqli_query($link, $delstring);
+
+		if($delquery){
+			redirect_to("../admin_news.php");
+			$message = "Your news story has been successfully deleted.";
+			return $message;
+		}else{
+			$message = "Sorry, unable to delete this story.";
+			return $message;
+		}
+		mysqli_close($link);
+	}
 
 	function dynamicNews($tbl, $col, $id) {
 		include('connect.php');
@@ -97,22 +112,6 @@
 			$error =  "<i>There was an error accessing this information. Please contact your admin.</i>";
 			return $error;
 		}
-	}
-
-		function editNews($id, $newsTitle, $newsImg, $newsContent) {
-			include('connect.php');
-
-			$updatestring = "UPDATE tbl_news SET news_title=\"{$newsTitle}\", news_content=\"{$newsContent}\" WHERE news_type={$type}";
-			$updatequery = mysqli_query($link, $updatestring);
-
-			if($updatequery) {
-				$message = "<i>Your page has successfully been updated.</i>";
-				return $message;
-			} else {
-				$message = "<i>There was a problem changing this information.</i>";
-				return $message;
-			}
-		mysqli_close($link);
 	}
 
 	function getContact() {
@@ -287,31 +286,49 @@
 	}
 
 		function addVolunteer($name, $volImg, $role) {
-			include('connect.php');
-			$volImg = mysqli_real_escape_string($link, $volImg);
+		include('connect.php');
+		$volImg = mysqli_real_escape_string($link, $volImg);
 
-				$updatenews = "INSERT INTO tbl_volunteers VALUES(NULL, 'avatar.jpg', '{$name}', '{$role}')";
-				$updateFinal = mysqli_query($link, $updatenews);
-
-				$message = "<i>Your new volunteer has successfully been added.</i>";
-					return $message;
-
+		$qstring = "INSERT INTO tbl_volunteers VALUES(NULL, 'avatar.jpg', '{$name}', '{$role}')";
+		$result = mysqli_query($link,$qstring);
 		
-			if($_FILES['volunteers_image']['type'] == "image/jpg" || $_FILES['volunteers_image']['type'] == "image/jpeg") {
+		if($_FILES['volunteers_image']['type'] == "image/jpg" || $_FILES['volunteers_image']['type'] == "image/jpeg") {
+			
+			$targetpath = "../images/volunteers/{$volImg}";
+			
+			if(move_uploaded_file($_FILES['volunteers_image']['tmp_name'],$targetpath)) {
 				
-				$target = "../images/volunteers/{$volImg}";
-
-				if(move_uploaded_file($_FILES['volunteers_image']['tmp_name'],$target)) {
-					
-					$updatenews = "INSERT INTO tbl_volunteers VALUES(NULL, '{$volImg}', '{$name}', '{$role}')";
-					$updateFinal = mysqli_query($link, $updatenews);
-
-					$message = "<i>Your new volunteer has successfully been added.</i>";
-					return $message;
-				}
+				$orig = "../images/volunteers/".$volImg;
+				
+				$qstring = "INSERT INTO tbl_volunteers VALUES(NULL, '{$volImg}', '{$name}', '{$role}')";
+				//echo $qstring;
+				$result = mysqli_query($link,$qstring);
+				
+				$message = "<i>Your image has successfully been added.</i>";
+				return $message;
 			}
-			mysqli_close($link);
 		}
+		
+		mysqli_close($link);
+	}
+
+
+	function deleteVolunteer($id) {
+		include('connect.php');
+
+		$delstring = "DELETE FROM tbl_volunteers WHERE volunteers_id={$id}";
+		$delquery = mysqli_query($link, $delstring);
+
+		if($delquery){
+			redirect_to("../admin_volunteers.php");
+			$message = "Your image has been successfully deleted.";
+			return $message;
+		}else{
+			$message = "Sorry, unable to delete this image.";
+			return $message;
+		}
+		mysqli_close($link);
+	}
 
 		function getAbout($id) {
 		include('connect.php');
@@ -328,20 +345,139 @@
 		mysql_close($link);
 	}
 
-	function editAbout($id, $textSec, $title, $content) {
+	function editAbout($id, $title, $content) {
 		include('connect.php');
 
-		$updatestring = "UPDATE tbl_about SET about_maintext=\"{$textSec}\", about_title=\"{$title}\", about_content=\"{$content}\" WHERE about_id={$id}";
+		$updatestring = "UPDATE tbl_about SET about_title=\"{$title}\", about_content=\"{$content}\" WHERE about_id={$id}";
 		$updatequery = mysqli_query($link, $updatestring);
 
 		if($updatequery) {
-			$message = "<i>Your page has successfully been updated.</i>";
-			return $message;
+			echo $updatestring;
+			// $message = "<i>Your page has successfully been updated.</i>";
+			// return $message;
 		} else {
 			$message = "<i>There was a problem changing this information.</i>";
 			return $message;
 		}
 		mysqli_close($link);
+	}
+
+		function addGallery($mainImg, $desc, $credit) {
+		include('connect.php');
+		$mainImg = mysqli_real_escape_string($link, $mainImg);
+		
+		if($_FILES['gallery_image']['type'] == "image/jpg" || $_FILES['gallery_image']['type'] == "image/jpeg") {
+			
+			$targetpath = "../images/gallery/{$mainImg}";
+			
+			if(move_uploaded_file($_FILES['gallery_image']['tmp_name'],$targetpath)) {
+				
+				$orig = "../images/gallery/".$mainImg;
+				
+				$qstring = "INSERT INTO tbl_gallery VALUES(NULL, NULL, '{$mainImg}', '{$desc}', '{$credit}')";
+				//echo $qstring;
+				$result = mysqli_query($link,$qstring);
+				
+				$message = "<i>Your image has successfully been added.</i>";
+				return $message;
+			}
+		}
+		
+		mysqli_close($link);
+	}
+
+
+	function deleteGallery($id) {
+		include('connect.php');
+
+		$delstring = "DELETE FROM tbl_gallery WHERE gallery_id={$id}";
+		$delquery = mysqli_query($link, $delstring);
+
+		if($delquery){
+			redirect_to("../admin_gallery.php");
+			$message = "Your image has been successfully deleted.";
+			return $message;
+		}else{
+			$message = "Sorry, unable to delete this image.";
+			return $message;
+		}
+		mysqli_close($link);
+	}
+
+	function getEvents($type) {
+		include('connect.php');
+		$newsstring = "SELECT * FROM `tbl_news` WHERE news_type = {$type}";
+		$newsquery = mysqli_query($link, $newsstring);
+
+		if ($newsquery) {
+			$found_news = mysqli_fetch_array($newsquery, MYSQLI_ASSOC);
+			return $found_news;
+		} else {
+			$message = "<i>There was a problem gathering this information.</i>";
+			return $message;
+		}
+			mysql_close($link);
+	}
+
+	function addEvents($type, $newsImg, $title, $content) {
+		include('connect.php');
+		$newsImg = mysqli_real_escape_string($link, $newsImg);
+
+		$date = date('o-m-d');
+
+		$qstring = "INSERT INTO tbl_news VALUES(NULL, '{$type}', '{$title}', '{$date}', 'default.jpg', '{$content}')";
+		$result = mysqli_query($link,$qstring);
+		
+
+		if($_FILES['news_image']['type'] == "image/jpg" || $_FILES['news_image']['type'] == "image/jpeg") {
+				
+			$targetpath = "../images/news/{$newsImg}";
+			
+			if(move_uploaded_file($_FILES['news_image']['tmp_name'],$targetpath)) {
+				
+				$orig = "../images/news/".$newsImg;
+				
+				$qstring = "INSERT INTO tbl_news VALUES(NULL, '{$type}', '{$title}', '{$date}', '{$newsImg}', '{$content}')";
+				//echo $qstring;
+				$result = mysqli_query($link,$qstring);
+				
+				$message = "<i>Your news story has successfully been added.</i>";
+				return $message;
+			}
+		}
+		
+		mysqli_close($link);
+	}
+
+
+	function deleteEvents($id) {
+		include('connect.php');
+
+		$delstring = "DELETE FROM tbl_news WHERE news_id={$id}";
+		$delquery = mysqli_query($link, $delstring);
+
+		if($delquery){
+			redirect_to("../admin_events.php");
+			$message = "Your news story has been successfully deleted.";
+			return $message;
+		}else{
+			$message = "Sorry, unable to delete this story.";
+			return $message;
+		}
+		mysqli_close($link);
+	}
+
+	function dynamicEvents($tbl, $col, $id) {
+		include('connect.php');
+		$querySingle = "SELECT * FROM {$tbl} WHERE {$col}={$id} ORDER BY news_id DESC";
+		$runSingle = mysqli_query($link, $querySingle);
+		
+		if($runSingle){
+			return $runSingle;	
+		}else{
+			$error =  "<i>There was an error accessing this information. Please contact your admin.</i>";
+			return $error;
+		}
 	}
 
 ?>
