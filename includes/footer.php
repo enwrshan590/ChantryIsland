@@ -73,5 +73,7 @@
     <script src="js/vendor/foundation.js"></script>
     <script src="js/map_api.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/TweenMax.min.js"></script>
   </body>
 </html>

@@ -9,14 +9,13 @@
 
       function makeRequest(){
             httpRequest = new XMLHttpRequest();
-
             if(!httpRequest){
               console.log('Giving up, can\'t use Ajax.');
               return false;
             }
 
-            var url = 'includes/getImages.php'+'?gallery_name='+this.id;
-
+            var url = 'includes/getImages.php'+'?gallery_id='+this.id;
+            console.log(url);
             httpRequest.onreadystatechange = showResults;
             httpRequest.open('GET', url);
             httpRequest.send();
@@ -24,14 +23,16 @@
 
 function showResults(){
   if (httpRequest.readyState === XMLHttpRequest.DONE && httpRequest.status === 200){
+      console.log("ready");
       var imageData = JSON.parse(httpRequest.responseText);
+      console.log(imageData);
 
       [].forEach.call(document.querySelectorAll('.hidden'), function(item){
         item.classList.remove('hidden');
       });
 
       mainImage.src = "images/gallery/" + imageData.gallery_image;
-      imageDesc.innerHTML = imageData.gallery_desc;
+      imageDesc.innerHTML = imageData.gallery_credit;
 
       TweenMax.to(mainImage, 0, {alpha:0, onComplete:changeOpacity});
   }

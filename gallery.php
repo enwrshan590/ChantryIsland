@@ -29,7 +29,7 @@
         <div id="thumbnails">
           <?php
             while($row=mysqli_fetch_array($images)){
-                echo "<img src=\"images/gallery/{$row['gallery_image']}\" alt=\"{$row['gallery_credit']}\">";
+                echo "<img id=\"{$row['gallery_id']}\" src=\"images/gallery/{$row['gallery_image']}\" alt=\"{$row['gallery_credit']}\">";
               }
           ?>
         </div>
