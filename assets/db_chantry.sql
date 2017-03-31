@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 31, 2017 at 12:06 AM
+-- Generation Time: Mar 31, 2017 at 09:07 PM
 -- Server version: 5.6.28
 -- PHP Version: 7.0.10
 
@@ -123,44 +123,44 @@ CREATE TABLE `tbl_gallery` (
 --
 
 INSERT INTO `tbl_gallery` (`gallery_id`, `gallery_name`, `gallery_image`, `gallery_desc`, `gallery_credit`) VALUES
-(1, 'birds_1', 'birds_1.jpg', 'These are some of the birds on the island.', ''),
-(2, 'birds_2', 'birds_2.jpg', 'These are some of the birds on the island.', ''),
-(3, 'aerial_1', 'aerial_1.jpg', 'Aerial view of the island.', ''),
-(4, 'aerial_2', 'aerial_2.jpg', 'Aerial view of the island.', ''),
-(5, 'aerial_3', 'aerial_3.jpg', 'Aerial view of the island.', ''),
-(6, 'aerial_4', 'aerial_4.jpg', 'Aerial view of the island.', ''),
-(7, 'aerial_5', 'aerial_5.jpg', 'Aerial view of the island.', ''),
-(8, 'birds_3', 'birds_3.jpg', 'Bird eggs found on the island.', ''),
-(9, 'birds_4', 'birds_4.jpg', 'Baby birds on the island.', ''),
-(10, 'birds_5', 'birds_5.jpg', 'Baby birds on the island.', ''),
-(11, 'birds_6', 'birds_6.jpg', 'Some birds on the island.', ''),
-(12, 'cottage_1', 'cottage_1.jpg', 'A view of the inside of one of our cottages.', ''),
-(13, 'cottage_2', 'cottage_2.jpg', 'The bedroom of one of our cottages.', ''),
-(14, 'cottage_3', 'cottage_3.jpg', 'The bedroom of one of our cottages.', ''),
-(15, 'cottage_4', 'cottage_4.jpg', 'Chantry Island Tour Base building.', ''),
-(16, 'cottage_5', 'cottage_5.jpg', 'Chantry Island lighthouse.', ''),
-(17, 'cottage', 'cottage.jpg', 'The dining area of one of our cottages.', ''),
-(19, 'island_1', 'island_1.jpg', 'A view of the island from the water.', ''),
-(20, 'island_2', 'island_2.jpg', 'A view of the island from the water in the winter.', ''),
-(21, 'island_3', 'island_3.jpg', 'Chantry Island lighthouse.', ''),
-(22, 'island_4', 'island_4.jpg', 'Chantry Island lighthouse.', ''),
-(23, 'island_5', 'island_5.jpg', 'Chantry Island lighthouse.', ''),
-(24, 'island_6', 'island_6.jpg', 'Chantry Island lighthouse.', ''),
-(25, 'island_7', 'island_7.jpg', 'Chantry Island lighthouse.', ''),
-(26, 'island', 'island.jpg', 'Aerial view of the island.', ''),
-(27, 'peerless_1', 'peerless_1.jpg', 'Peerless boat tour.', ''),
-(28, 'peerless_2', 'peerless_2.jpg', 'Peerless boat tour.', ''),
-(29, 'peerless_3', 'peerless_3.jpg', 'Peerless boat tour.', ''),
-(30, 'sunset_1', 'sunset_1.jpg', 'One of the many beautiful sunsets on the island.', ''),
-(31, 'sunset_2', 'sunset_2.jpg', 'One of the many beautiful sunsets on the island.', ''),
-(32, 'sunset_3', 'sunset_3.jpg', 'One of the many beautiful sunsets on the island.', ''),
-(33, 'tour_base_1', 'tour_base_1.jpg\r\n', 'Chantry Island tour base.', ''),
-(34, 'tour_base_2', 'tour_base_2.jpg', 'Chantry Island tour base.', ''),
-(35, 'tour_base_3', 'tour_base_3.jpg', 'Chantry Island tour base.', ''),
-(36, 'tour_base_4', 'tour_base_4.jpg', 'Chantry Island tour base.', ''),
-(37, 'tour_base_5', 'tour_base_5.jpg', 'Chantry Island tour base.', ''),
-(38, 'tour_base_6', 'tour_base_6.jpg', 'Peerless boat tour.', ''),
-(39, 'tour_boat', 'tour_boat.jpg', 'Peerless boat tour.', '');
+(1, 'birds_1', 'birds_1.jpg', 'These are some of the birds on the island.', 'Carol Walberg'),
+(2, 'birds_2', 'birds_2.jpg', 'These are some of the birds on the island.', 'Carol Walberg'),
+(3, 'aerial_1', 'aerial_1.jpg', 'Aerial view of the island.', 'Karen Smith'),
+(4, 'aerial_2', 'aerial_2.jpg', 'Aerial view of the island.', 'Karen Smith'),
+(5, 'aerial_3', 'aerial_3.jpg', 'Aerial view of the island.', 'Karen Smith'),
+(6, 'aerial_4', 'aerial_4.jpg', 'Aerial view of the island.', 'Karen Smith'),
+(7, 'aerial_5', 'aerial_5.jpg', 'Aerial view of the island.', 'Karen Smith'),
+(8, 'birds_3', 'birds_3.jpg', 'Bird eggs found on the island.', 'Nancy Calder'),
+(9, 'birds_4', 'birds_4.jpg', 'Baby birds on the island.', 'Nancy Calder'),
+(10, 'birds_5', 'birds_5.jpg', 'Baby birds on the island.', 'Nancy Calder'),
+(11, 'birds_6', 'birds_6.jpg', 'Some birds on the island.', 'Nancy Calder'),
+(12, 'cottage_1', 'cottage_1.jpg', 'A view of the inside of one of our cottages.', 'James Swartz'),
+(13, 'cottage_2', 'cottage_2.jpg', 'The bedroom of one of our cottages.', 'James Swartz'),
+(14, 'cottage_3', 'cottage_3.jpg', 'The bedroom of one of our cottages.', 'James Swartz'),
+(15, 'cottage_4', 'cottage_4.jpg', 'Chantry Island Tour Base building.', 'Vicki Tomori'),
+(16, 'cottage_5', 'cottage_5.jpg', 'Chantry Island lighthouse.', 'Vicki Tomori'),
+(17, 'cottage', 'cottage.jpg', 'The dining area of one of our cottages.', 'Terry Thomas'),
+(19, 'island_1', 'island_1.jpg', 'A view of the island from the water.', 'Carol Walberg'),
+(20, 'island_2', 'island_2.jpg', 'A view of the island from the water in the winter.', 'Carol Walberg'),
+(21, 'island_3', 'island_3.jpg', 'Chantry Island lighthouse.', 'Vicki Tomori'),
+(22, 'island_4', 'island_4.jpg', 'Chantry Island lighthouse.', 'Vicki Tomori'),
+(23, 'island_5', 'island_5.jpg', 'Chantry Island lighthouse.', 'Vicki Tomori'),
+(24, 'island_6', 'island_6.jpg', 'Chantry Island lighthouse.', 'Vicki Tomori'),
+(25, 'island_7', 'island_7.jpg', 'Chantry Island lighthouse.', 'Vicki Tomori'),
+(26, 'island', 'island.jpg', 'Aerial view of the island.', 'James Swartz'),
+(27, 'peerless_1', 'peerless_1.jpg', 'Peerless boat tour.', 'George Plant'),
+(28, 'peerless_2', 'peerless_2.jpg', 'Peerless boat tour.', 'George Plant'),
+(29, 'peerless_3', 'peerless_3.jpg', 'Peerless boat tour.', 'George Plant'),
+(30, 'sunset_1', 'sunset_1.jpg', 'One of the many beautiful sunsets on the island.', 'Terry Thomas'),
+(31, 'sunset_2', 'sunset_2.jpg', 'One of the many beautiful sunsets on the island.', 'Terry Thomas'),
+(32, 'sunset_3', 'sunset_3.jpg', 'One of the many beautiful sunsets on the island.', 'Terry Thomas'),
+(33, 'tour_base_1', 'tour_base_1.jpg\r\n', 'Chantry Island tour base.', 'Misc.'),
+(34, 'tour_base_2', 'tour_base_2.jpg', 'Chantry Island tour base.', 'Misc.'),
+(35, 'tour_base_3', 'tour_base_3.jpg', 'Chantry Island tour base.', 'Misc.'),
+(36, 'tour_base_4', 'tour_base_4.jpg', 'Chantry Island tour base.', 'Misc.'),
+(37, 'tour_base_5', 'tour_base_5.jpg', 'Chantry Island tour base.', 'Misc.'),
+(38, 'tour_base_6', 'tour_base_6.jpg', 'Peerless boat tour.', 'Misc.'),
+(39, 'tour_boat', 'tour_boat.jpg', 'Peerless boat tour.', 'Wayne MacDonald');
 
 -- --------------------------------------------------------
 
@@ -201,7 +201,9 @@ INSERT INTO `tbl_last_log` (`last_log_id`, `last_log_date`, `user_id`) VALUES
 (110, 'Thursday, March 30th, 2017 @ 11:29am', 1),
 (111, 'Thursday, March 30th, 2017 @ 11:48am', 1),
 (112, 'Thursday, March 30th, 2017 @ 3:16pm', 1),
-(113, 'Thursday, March 30th, 2017 @ 3:17pm', 1);
+(113, 'Thursday, March 30th, 2017 @ 3:17pm', 1),
+(114, 'Friday, March 31st, 2017 @ 2:27pm', 1),
+(115, 'Friday, March 31st, 2017 @ 2:45pm', 1);
 
 -- --------------------------------------------------------
 
@@ -484,7 +486,7 @@ ALTER TABLE `tbl_gallery`
 -- AUTO_INCREMENT for table `tbl_last_log`
 --
 ALTER TABLE `tbl_last_log`
-  MODIFY `last_log_id` smallint(4) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `last_log_id` smallint(4) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 --
 -- AUTO_INCREMENT for table `tbl_news`
 --
