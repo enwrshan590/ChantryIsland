@@ -6,7 +6,7 @@
 
   $popContact = getContact();
 
-?>
+?> 
 
      <!-- Footer -->
       <footer class="row" id="footerSec">

@@ -97,8 +97,6 @@
                 <p style="float:left;">Tours leave at: <br>1:00  pm and 3:00 pm</p>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -132,7 +130,7 @@
           <h3>Rates</h3>
           <p><?php echo $popRates['schedule_rates'] ?></p>
         </div>
-      </div>
+      </div>     
 
 <?php
   require_once("includes/footer.php");

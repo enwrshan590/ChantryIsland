@@ -20,7 +20,7 @@
 		}else if($dir == "deleteEvents"){
 			
 			$id = $_GET['id'];
-			deleteNews($id);
+			deleteEvents($id);
 		}
 	}
 ?>

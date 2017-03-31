@@ -27,8 +27,6 @@
 	      		<form action="admin_schedule.php" method="post">
 						<label><b>Text Section:</b></label>
 						<textarea name="textSec"><?php echo $popRates['schedule_text'] ?></textarea>
-						<label><b>Schedule:</b></label>
-						<textarea name=""></textarea>
 						<label><b>Rates Information:</b></label>
 						<textarea name="rates"><?php echo $popRates['schedule_rates'] ?></textarea>
 						<input type="submit" name="submit" value="Make Changes">

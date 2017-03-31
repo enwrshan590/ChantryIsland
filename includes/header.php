@@ -7,6 +7,7 @@
     <title>Chantry Island</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL60hW1FdUjS_vV2_-p0LLL-fJeE_5wro"></script>
   </head>
   <body>
 

@@ -32,7 +32,7 @@ function showResults(){
       });
 
       mainImage.src = "images/gallery/" + imageData.gallery_image;
-      imageDesc.innerHTML = imageData.gallery_credit;
+      imageDesc.innerHTML = 'Photo taken by: '+imageData.gallery_credit;
 
       TweenMax.to(mainImage, 0, {alpha:0, onComplete:changeOpacity});
   }
@@ -50,7 +50,47 @@ function showResults(){
 
 
 
+  // about page
 
+  var button = document.querySelectorAll('.aboutTab'),
+      // title = document.querySelector('input'),
+      // text = document.querySelector('textarea'),
+      title = document.querySelector('.filler');
+
+      function requestAbout(){
+            httpRequest = new XMLHttpRequest();
+            if(!httpRequest){
+              console.log('Giving up, can\'t use Ajax.');
+              return false;
+            }
+
+            var link = 'includes/getAbout.php'+'?about_id='+this.id;
+            console.log(link);
+            httpRequest.onreadystatechange = showAbout;
+            httpRequest.open('GET', link);
+            httpRequest.send();
+        }
+
+function showAbout(){
+  console.log(httpRequest.status);
+  if (httpRequest.readyState === XMLHttpRequest.DONE && httpRequest.status === 200){
+      console.log("ready");
+      var json = JSON.parse(httpRequest.responseText);
+
+      console.log(json);
+
+      [].forEach.call(document.querySelectorAll('.hidden'), function(item){
+        item.classList.remove('hidden');
+      });
+
+      title.innerHTML = json.about_title;
+
+  }
+}
+
+[].forEach.call(button, function(tabTitle){
+  tabTitle.addEventListener('click', requestAbout, false);
+});
 
 
 

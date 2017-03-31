@@ -330,9 +330,9 @@
 		mysqli_close($link);
 	}
 
-		function getAbout($id) {
+		function getAbout() {
 		include('connect.php');
-		$pagestring = "SELECT * FROM `tbl_about` WHERE about_id = {$id}";
+		$pagestring = "SELECT * FROM tbl_about";
 		$pagequery = mysqli_query($link, $pagestring);
 
 		if ($pagequery) {
@@ -345,16 +345,15 @@
 		mysql_close($link);
 	}
 
-	function editAbout($id, $title, $content) {
+	function editAbout($tabone, $tabtwo, $tabthree) {
 		include('connect.php');
 
-		$updatestring = "UPDATE tbl_about SET about_title=\"{$title}\", about_content=\"{$content}\" WHERE about_id={$id}";
+		$updatestring = "UPDATE tbl_about SET about_tabone=\"{$tabone}\", about_tabtwo=\"{$tabtwo}\", about_tabthree=\"{$tabthree}\"";
 		$updatequery = mysqli_query($link, $updatestring);
 
 		if($updatequery) {
-			echo $updatestring;
-			// $message = "<i>Your page has successfully been updated.</i>";
-			// return $message;
+			$message = "<i>Your page has successfully been updated.</i>";
+			return $message;
 		} else {
 			$message = "<i>There was a problem changing this information.</i>";
 			return $message;

@@ -24,7 +24,7 @@
       <div class="row" id="galSec">
         <div id="photo-viewer">
           <img src="images/gallery/aerial_1.jpg" alt="Aerial View" class="gallery-large hidden">
-          <p class="desc-text hidden">Aerial view of the island.</p>
+          <p class="desc-text hidden"></p>
         </div>
         <div id="thumbnails">
           <?php
