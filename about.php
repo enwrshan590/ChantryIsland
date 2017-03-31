@@ -19,6 +19,14 @@
           <h2>About Chantry Island</h2>
           <img src="images/wheel.svg" alt="Boat wheel" class="wheel">
         </div>
+
+        <div class="small-12 medium-12 large-12 columns aboutVid">
+          <video controls style="max-width: 600px; width:100%; margin-top: 2em;">
+          <source src="video/Chantry-Island-Final_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
         <div class="small-12 medium-12 large-12 columns aboutBlurb">
           <p>Chantry Island is located on Lake Huron, just over a mile southwest of the Saugeen River mouth in Southampton, Ontario. On the island is a majestic Imperial Lighthouse built in the mid 1800’s, as well as the Keeper’s quarters and a boat house. In 1822, during a hydrographic survey, Captain Henry Bayfield of the Royal Navy christened the island and named it after his friend and British sculptor Sir Francis Chantry.</p>
         </div>
